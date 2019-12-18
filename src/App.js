@@ -15,8 +15,9 @@ function App() {
   return (
     <React.Fragment>
       <Navbar />
+      
       <Switch>
-        <Route exact path="/" component={ProductList} />{/* another way of doing the same is adding exact */}
+        <Route exact path="/" component={ProductList} />
         <Route path="/details" component={Details} />
         <Route path="/card" component={Card} />
         <Route component={Default} />
