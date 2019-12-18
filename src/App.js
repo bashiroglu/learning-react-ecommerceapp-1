@@ -16,15 +16,10 @@ function App() {
     <React.Fragment>
       <Navbar />
       <Switch>
-        {/* this don't work as intended because fist one matches all <Route path="/" component={ProductList} />
-        <Route path="/details" component={Details} />
-        <Route path="/card" component={Card} />
-        <Route component={Default} />*/}
+        <Route exact path="/" component={ProductList} />{/* another way of doing the same is adding exact */}
         <Route path="/details" component={Details} />
         <Route path="/card" component={Card} />
         <Route component={Default} />
-        <Route path="/" component={ProductList} /> {/* we use this teqnique to avoid that proplem */}
-        
       </Switch>
     </React.Fragment>
   );
