@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import logo from './logo.svg';
 
+import styled from 'styled-components';
+
 export class Navbar extends Component {
   render() {
     return (
@@ -23,14 +25,23 @@ https://www.iconfinder.com/Makoto_msk */}
           </li>
         </ul>
         <Link to="/cart" className="ml-auto">
-          <button>
-            <i className="fas fa-cart-plus" />
+          <ButtonContainer>
+            <span className="mr-2">
+              <i className="fas fa-cart-plus " />
+            </span>
             my cart
-          </button>
+          </ButtonContainer>
         </Link>
       </nav>
     );
   }
 }
+export const ButtonContainer = styled.button`
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  background: transparent;
+  border: 0.05rem solid var(--lightBlue); /* because at the of the day, we will have 1 css file */
+  
+`;
 
 export default Navbar;
